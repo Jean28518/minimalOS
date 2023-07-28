@@ -18,7 +18,7 @@
 
   <!-- Uncomment the two lines for full app menu -->
   <!-- <separator /> -->
-  <!-- <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/> -->
+  <!-- <menu id="applications-menu" label="Anwendungen" execute="/usr/bin/obamenu"/> -->
 
   <separator />
   <item label="Neustarten">

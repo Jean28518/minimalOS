@@ -15,18 +15,20 @@ Drucker werden (soweit unterstützt) automatisch erkannt und können in Chromium
 
 ## .iso-Datei bauen
 
-- Unter `deb/usr/lib/minimal-os/openbox` kann das OpenBox Menü und die Autostart-Datei angepasst werden. Dort kann ebenfalls der Link der Webseite, die sich standardmäßig öffnen soll definiert werden.
-- Ebenfalls kann das Hintergrundbild `deb/usr/share/backgrounds/minimal-os.jpg` ausgetauscht werden
-- Außerdem kann das OpenBox Menü (Rechtsklick) unter `deb/usr/lib/minimal-os/menu.xml` angepasst werden. Standardmäßig ist das volle Menü deaktiviert.
+- Unter `deb/usr/lib/minimal-os/openbox/autostart` können automatisch gestartete Anwendungen sowie ebenfalls der Link der Webseite, die sich standardmäßig öffnen soll, definiert werden.
+- Ebenfalls kann das Hintergrundbild `deb/usr/share/backgrounds/minimal-os.jpg` ausgetauscht werden.
+- Außerdem kann das OpenBox Menü (Rechtsklick) unter `deb/usr/lib/minimal-os/menu.xml` angepasst werden. Standardmäßig ist das volle Applications-Menü deaktiviert.
 - In der `preseed.cfg` Datei können Standard-Passwörter angepasst werden, sowie die vollautomatische Installation unterbrochen werden.
 
 ```bash
+git clone https://github.com/Jean28518/minimalOS.git
+cd minimalOS
 bash download-debian.sh
 bash create-deb.sh
-bash build.sh
+sudo bash build.sh
 ```
 
-- Nun sollte eine minimalOS.iso Datei existieren, die wie jedes andere Linux vollautomatisch installiert werden kann. **Achtung: Das System formatiert unter Umständen alle Festplatten auf dem System!**
+- Nun sollte eine minimalOS.iso Datei existieren, die wie jedes andere Linux vollautomatisch installiert werden kann. **Achtung: Das System formatiert (wenn nicht in der preseed-Datei auskommentiert) alle Festplatten auf dem System!**
 
 ## Weitere Anpassungen benötigt?
 
