@@ -23,3 +23,7 @@ bash build.sh
 ```
 
 - Nun sollte eine minimalOS.iso Datei existieren, die wie jedes andere Linux vollautomatisch installiert werden kann. **Achtung: Das System formatiert unter Umständen alle Festplatten auf dem System!**
+
+## Weitere Anpassungen benötigt?
+
+Melden Sie sich gerne unter <https://www.linuxguides.de/kontakt/> und wir helfen Ihnen gerne weiter!
