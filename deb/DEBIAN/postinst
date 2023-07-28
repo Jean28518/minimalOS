@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/bin/bash /usr/lib/minimal-os/install-minimal-os.sh

@@ -1,0 +1,5 @@
+xrandr --output Virtual1 --mode 1920x1080 # if screen resolution is wrong
+feh --bg-scale /usr/share/backgrounds/minimal-os.jpg
+sleep 1 # we have to wait for the internet connection
+chromium --kiosk --temp-profile --noerrdialogs --enable-features=OverlayScrollbar --disable-restore-session-state https://linuxguides.de # Kiosk mode
+# chromium --start-maximized https://linuxguides.de # For (normal) worker mode

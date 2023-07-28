@@ -1,0 +1,8 @@
+Package: minimal-os
+Version: 0.0.1
+Depends: openbox, chromium, chromium-l10n, pavucontrol, lightdm-autologin-greeter, feh, arandr, printer-driver-all, cups, unattended-upgrades, apt-listchanges
+Maintainer: Jean28518
+Architecture: amd64
+Hompage: https://www.linuxguides.de/
+Section: Utils
+Description: Prepares and installs minmal-os after installation of debian

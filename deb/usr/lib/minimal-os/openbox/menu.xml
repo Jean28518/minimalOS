@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Webbrowser">
+    <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+  <item label="Soundeinstellungen">
+    <action name="Execute"><execute>pavucontrol</execute></action>
+  </item>
+  <!-- <item label="Bildschirmeinstellungen"> -->
+    <!-- <action name="Execute"><execute>arandr</execute></action> -->
+  <!-- </item> -->
+
+  <!-- Uncomment the two lines for full app menu -->
+  <!-- <separator /> -->
+  <!-- <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/> -->
+  
+  <separator />
+  <item label="Neustarten">
+          <action name="Execute"><execute>/sbin/reboot</execute></action>
+  </item>
+  <item label="Herunterfahren">
+          <action name="Execute"><execute>/sbin/shutdown 0</execute></action>
+  </item>
+
+</menu>
+
+</openbox_menu>
