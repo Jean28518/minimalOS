@@ -4,12 +4,14 @@ Einfaches Linux für Kiosks oder sehr leichte Workstations, welches nahezu nur a
 
 ![minimalOS](screenshot.png)
 
-Gesteuert kann das System über einen Klick auf den Desktop, nachdem der Browser geschlossen wurde (Alt+F4).
+Gesteuert kann das System über einen Rechtsklick auf den Desktop, nachdem der Browser geschlossen wurde (Alt+F4).
 
 Der Standard-Benutzer hat keine Root-Rechte und meldet sich vollautomatisch ohne Passworteingabe ein.
-Um Root zu werden, muss man auf eine andere Konsole wechseln (Beispiel: Strg + Alt + F1) und sich dann als `root` einloggen. Das Passwort dafür kann in der `preseed.cfg` und ist standardmäßig `mei3eiN6`.
+Um Root zu werden, muss man auf eine andere Konsole wechseln (Beispiel: Strg + Alt + F1) und sich dann als `root` einloggen. Das Passwort dafür kann in der `preseed.cfg` konfiguriert werden und ist standardmäßig `mei3eiN6`.
 
-**Achtung:** !Das System installiert sich vollautomatisch auf den Rechner und löscht alle Partitionen!
+Drucker werden (soweit unterstützt) automatisch erkannt und können in Chromium unter "andere" ausgewählt werden. Das System untertützt ebenfalls Bildschirmeinstellungen sowie Soundeinstellungen über einen Rechtsklick auf den Desktop. Die Bildschirmeinstellung kann auch permanent in der unten genannten autostart-Datei hart konfiguriert werden.
+
+**Achtung:** !Das System installiert sich vollautomatisch auf den Rechner und löscht standardmäßig alle Partitionen!
 
 ## .iso-Datei bauen
 
