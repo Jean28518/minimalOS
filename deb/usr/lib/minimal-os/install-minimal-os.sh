@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export DEBIAN_FRONTEND="noninteractive"
+
 update_config() {
     local file=$1
     local key=$2
@@ -34,3 +36,7 @@ update-grub
 
 cp /usr/lib/minimal-os/openbox/autostart /etc/xdg/openbox/autostart
 cp /usr/lib/minimal-os/openbox/menu.xml /etc/xdg/openbox/menu.xml
+
+
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+/usr/sbin/dpkg-reconfigure -f noninteractive unattended-upgrades

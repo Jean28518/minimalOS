@@ -2,6 +2,8 @@
 
 Einfaches Linux für Kiosks oder sehr leichte Workstations, welches nahezu nur aus einem Chromium Browser besteht aber sich vollautomatisch aktualisiert und (fast) ausbruchsicher ist.
 
+![minimalOS](screenshot.png)
+
 Gesteuert kann das System über einen Klick auf den Desktop, nachdem der Browser geschlossen wurde (Alt+F4).
 
 Der Standard-Benutzer hat keine Root-Rechte und meldet sich vollautomatisch ohne Passworteingabe ein.

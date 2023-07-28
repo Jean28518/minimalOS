@@ -12,14 +12,14 @@
   <item label="Soundeinstellungen">
     <action name="Execute"><execute>pavucontrol</execute></action>
   </item>
-  <!-- <item label="Bildschirmeinstellungen"> -->
-    <!-- <action name="Execute"><execute>arandr</execute></action> -->
-  <!-- </item> -->
+  <item label="Bildschirmeinstellungen">
+    <action name="Execute"><execute>arandr</execute></action>
+  </item>
 
   <!-- Uncomment the two lines for full app menu -->
   <!-- <separator /> -->
   <!-- <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/> -->
-  
+
   <separator />
   <item label="Neustarten">
           <action name="Execute"><execute>/sbin/reboot</execute></action>
