@@ -1,3 +1,5 @@
+arch=$1
+
 # Prepare working files for manipulating iso file
 mkdir ORIGISO
 mkdir NEWISO
@@ -6,11 +8,11 @@ cp -rT ./ORIGISO/ ./NEWISO/
 umount ./ORIGISO 
 
 # Write preseed.cfg into new iso
-chmod +w -R ./NEWISO/install.amd/
-gunzip ./NEWISO/install.amd/gtk/initrd.gz
-echo preseed.cfg | cpio -H newc -o -A -F ./NEWISO/install.amd/gtk/initrd
-gzip ./NEWISO/install.amd/gtk/initrd
-chmod -w -R ./NEWISO/install.amd
+chmod +w -R ./NEWISO/install.$arch/
+gunzip ./NEWISO/install.$arch/gtk/initrd.gz
+echo preseed.cfg | cpio -H newc -o -A -F ./NEWISO/install.$arch/gtk/initrd
+gzip ./NEWISO/install.$arch/gtk/initrd
+chmod -w -R ./NEWISO/install.$arch
 
 # Copy the custom package (which does the installation of minimal-os in the end) to the new iso
 cp minimal-os.deb ./NEWISO/

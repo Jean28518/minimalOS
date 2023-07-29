@@ -24,18 +24,47 @@ Unterstützte Architekturen: amd64, arm64, i386 (32bit)
 
 ## .iso-Datei bauen
 
-- Unter `deb/usr/lib/minimal-os/openbox/autostart` können automatisch gestartete Anwendungen sowie ebenfalls der Link der Webseite, die sich standardmäßig öffnen soll, definiert werden.
+- Unter `deb/usr/lib/minimal-os/openbox/autostart` können automatisch gestartete Anwendungen sowie ebenfalls der Link der Webseite, die sich standardmäßig öffnen sollen, definiert werden.
 - Ebenfalls kann das Hintergrundbild `deb/usr/share/backgrounds/minimal-os.jpg` ausgetauscht werden.
 - Außerdem kann das OpenBox Menü (Rechtsklick) unter `deb/usr/lib/minimal-os/menu.xml` angepasst werden. Standardmäßig ist das volle Applications-Menü deaktiviert.
-- In der `preseed.cfg` Datei können Standard-Passwörter angepasst werden, sowie die vollautomatische Installation unterbrochen werden.
+- In der `preseed.cfg` Datei können Standard-Passwörter angepasst werden, weitere Software hinzugefügt werden (in der Zeile `d-i pkgsel/include string`), sowie die vollautomatische Installation unterbrochen werden.
 
 ```bash
 git clone https://github.com/Jean28518/minimalOS.git
 cd minimalOS
-bash download-debian-amd64.sh # Andere Datei für andere Architekturen wählen
 bash create-deb.sh
-sudo bash build.sh
 ```
+
+---
+
+### amd64
+
+Die "normale" Architektur
+
+```bash
+bash download-debian-amd64.sh
+sudo bash build.sh amd
+```
+
+### arm64
+
+Beispielsweise für den Raspberry Pi.
+
+```bash
+bash download-debian-arm64.sh
+sudo bash build.sh arm
+```
+
+### i386
+
+Für ältere 32bit Systeme.
+
+```bash
+bash download-debian-i386.sh
+sudo bash build.sh 386
+```
+
+---
 
 - Nun sollte eine minimalOS.iso Datei existieren, die wie jedes andere Linux vollautomatisch installiert werden kann. **Achtung: Das System formatiert (wenn nicht in der preseed-Datei auskommentiert) alle Festplatten auf dem System!**
 
