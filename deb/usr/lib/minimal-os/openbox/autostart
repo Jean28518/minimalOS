@@ -4,5 +4,16 @@
 xrandr --output Virtual1 --mode 1920x1080 # if screen resolution is wrong
 feh --bg-scale /usr/share/backgrounds/minimal-os.jpg # Background, please do not change this line
 sleep 1 # we have to wait for the internet connection
+
+# At the very first start:
+if [ -e "~/.config/initial-setup" ]; then
+    echo "Initial setup already done."
+else
+    pactl -- set-sink-volume 0 100% # Enable sound
+    pactl -- set-sink-mute 0 0 # Unmute
+    touch "~/.config/initial-setup"
+fi
+
+# Start Apps
 chromium --kiosk --temp-profile --noerrdialogs --enable-features=OverlayScrollbar --disable-restore-session-state https://linuxguides.de # Kiosk mode
 #chromium --start-maximized https://linuxguides.de # For (normal) worker mode
