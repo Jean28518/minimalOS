@@ -13,6 +13,15 @@ Drucker werden (soweit unterstützt) automatisch erkannt und können in Chromium
 
 **Achtung:** !Das System installiert sich vollautomatisch auf den Rechner und löscht standardmäßig alle Partitionen!
 
+## Hardware Anforderungen
+
+|     |  Leerlauf | Empfohlene Mindestanforderungen  |
+|-----|-----------|----------------------------------|
+| RAM | 340 MB    | 1 GB                             |
+| Festplattenkapazität | 2.5 GB | 10 GB |
+
+Unterstützte Architekturen: amd64, arm64, i386 (32bit)
+
 ## .iso-Datei bauen
 
 - Unter `deb/usr/lib/minimal-os/openbox/autostart` können automatisch gestartete Anwendungen sowie ebenfalls der Link der Webseite, die sich standardmäßig öffnen soll, definiert werden.
@@ -23,7 +32,7 @@ Drucker werden (soweit unterstützt) automatisch erkannt und können in Chromium
 ```bash
 git clone https://github.com/Jean28518/minimalOS.git
 cd minimalOS
-bash download-debian.sh
+bash download-debian-amd64.sh # Andere Datei für andere Architekturen wählen
 bash create-deb.sh
 sudo bash build.sh
 ```
