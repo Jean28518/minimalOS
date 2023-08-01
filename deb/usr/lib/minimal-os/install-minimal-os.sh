@@ -37,6 +37,8 @@ update-grub
 cp /usr/lib/minimal-os/openbox/autostart /etc/xdg/openbox/autostart
 cp /usr/lib/minimal-os/openbox/menu.xml /etc/xdg/openbox/menu.xml
 
+python3 /usr/lib/minimal-os/openbox/setup-media-keys.py
+
 
 echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
 /usr/sbin/dpkg-reconfigure -f noninteractive unattended-upgrades

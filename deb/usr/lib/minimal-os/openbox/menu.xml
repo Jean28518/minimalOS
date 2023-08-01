@@ -15,6 +15,9 @@
   <item label="Bildschirmeinstellungen">
     <action name="Execute"><execute>arandr</execute></action>
   </item>
+  <item label="Netzwerkeinstellungen">
+    <action name="Execute"><execute>nm-connection-editor</execute></action>
+  </item>
 
   <!-- Uncomment the two lines for full app menu -->
   <!-- <separator /> -->
