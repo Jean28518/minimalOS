@@ -30,6 +30,7 @@ Unterstützte Architekturen: amd64, arm64, i386 (32bit)
 - In der `preseed.cfg` Datei können Standard-Passwörter angepasst werden, weitere Software hinzugefügt werden (in der Zeile `d-i pkgsel/include string`), sowie die vollautomatische Installation unterbrochen werden.
 
 ```bash
+sudo apt install syslinux-utils
 git clone https://github.com/Jean28518/minimalOS.git
 cd minimalOS
 bash create-deb.sh
