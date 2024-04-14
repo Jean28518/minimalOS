@@ -6,5 +6,5 @@ chmod 755 deb/DEBIAN
 chmod 775 deb/DEBIAN/postinst
 
 # Build deb package
-dpkg-deb --build -Zxz deb 
+dpkg-deb --build -Zxz --root-owner-group deb 
 mv deb.deb minimal-os.deb
