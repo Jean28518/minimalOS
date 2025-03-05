@@ -1,1 +1,9 @@
-wget -O debian-original.iso wget -O debian-original.iso https://cdimage.debian.org/debian-cd/current/i386/iso-cd/debian-12.7.0-i386-netinst.iso
+# Download the index.html of debian.org
+wget -O /tmp/debian-index.html https://www.debian.org/distrib/
+
+#search for the line with https://*-amd64-netinst.iso and extract the link to the latest debian iso
+DOWNLOAD_LINK=$(grep -oP 'href="\K[^"]*debian-[0-9]+.[0-9]+.[0-9]+-i386-netinst.iso' /tmp/debian-index.html)
+
+echo "Downloading the latest debian iso from: $DOWNLOAD_LINK"
+
+wget -O debian-original.iso $DOWNLOAD_LINK
